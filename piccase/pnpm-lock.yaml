@@ -23,6 +23,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      framer-motion:
+        specifier: ^11.2.10
+        version: 11.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       lucide-react:
         specifier: ^0.383.0
         version: 0.383.0(react@18.3.1)
@@ -40,11 +43,11 @@ importers:
         version: 2.3.0
       tailwindcss-animate:
         specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.3)
+        version: 1.0.7(tailwindcss@3.4.4)
     devDependencies:
       '@types/node':
         specifier: ^20
-        version: 20.14.1
+        version: 20.14.2
       '@types/react':
         specifier: ^18
         version: 18.3.3
@@ -62,7 +65,7 @@ importers:
         version: 8.4.38
       tailwindcss:
         specifier: ^3.4.1
-        version: 3.4.3
+        version: 3.4.4
       typescript:
         specifier: ^5
         version: 5.4.5
@@ -637,8 +640,8 @@ packages:
   '@babel/regjsgen@0.8.0':
     resolution: {integrity: sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==}
 
-  '@babel/runtime@7.24.6':
-    resolution: {integrity: sha512-Ja18XcETdEl5mzzACGd+DKgaGJzPTCow7EglgwTmHdwokzDFYh/MHua6lU6DV/hjF2IaOJ4oX2nqnjG7RElKOw==}
+  '@babel/runtime@7.24.7':
+    resolution: {integrity: sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.24.7':
@@ -825,8 +828,8 @@ packages:
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
-  '@types/node@20.14.1':
-    resolution: {integrity: sha512-T2MzSGEu+ysB/FkWfqmhV3PLyQlowdptmmgD20C6QxsS8Fmv5SjpZ1ayXaEC0S21/h5UJ9iA6W/5vSNU5l00OA==}
+  '@types/node@20.14.2':
+    resolution: {integrity: sha512-xyu6WAMVwv6AKFLB+e/7ySZVr/0zLCzOa7rSpq6jNwpqOrUbcACDWC+53d4n2QHOnDou0fbIsg8wZu/sxrnI4Q==}
 
   '@types/prop-types@15.7.12':
     resolution: {integrity: sha512-5zvhXYtRNRluoE/jAp4GVsSduVUzNWKkOZrCDBWYtE7biZywwdC2AcEzg+cSMLFRfVgeAFqpfNabiPjxFddV1Q==}
@@ -1026,8 +1029,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001627:
-    resolution: {integrity: sha512-4zgNiB8nTyV/tHhwZrFs88ryjls/lHiqFhrxCW4qSTeuRByBVnPYpDInchOIySWknznucaf31Z4KYqjfbrecVw==}
+  caniuse-lite@1.0.30001629:
+    resolution: {integrity: sha512-c3dl911slnQhmxUIT4HhYzT7wnBK/XYpGnYLOj4nJBaRiw52Ibe7YxlDaAeRECvA786zCuExhxIUJ2K7nHMrBw==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1367,6 +1370,20 @@ packages:
     resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
     engines: {node: '>=14'}
 
+  framer-motion@11.2.10:
+    resolution: {integrity: sha512-/gr3PLZUVFCc86a9MqCUboVrALscrdluzTb3yew+2/qKBU8CX6nzs918/SRBRCqaPbx0TZP10CB6yFgK2C5cYQ==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
@@ -1621,12 +1638,12 @@ packages:
     resolution: {integrity: sha512-N3yCS/NegsOBokc8GAdM8UcmfsKiSS8cipheD/nivzr700H+nsMOxJjQnvwOcRYVuFkdH0wGUvW2WbXGmrZGbQ==}
     engines: {node: '>=14'}
 
-  jackspeak@3.2.5:
-    resolution: {integrity: sha512-a1hopwtr4NawFIrSmFgufzrN1Qy2BAfMJ0yScJBs/olJhTcctCy3YIDx4hTY2DOTJD1pUMTly80kmlYZxjZr5w==}
+  jackspeak@3.4.0:
+    resolution: {integrity: sha512-JVYhQnN59LVPFCEcVa2C3CrEKYacvjRfqIQl+h8oi91aLYQVWRYbxjPcv1bUiUy/kLmQaANrYfNMCO3kuEDHfw==}
     engines: {node: '>=14'}
 
-  jiti@1.21.0:
-    resolution: {integrity: sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==}
+  jiti@1.21.3:
+    resolution: {integrity: sha512-uy2bNX5zQ+tESe+TiC7ilGRz8AtRGmnJH55NC5S0nSUjvvvM2hJHmefHErugGXN4pNv4Qx7vLsnNw9qJ9mtIsw==}
     hasBin: true
 
   jose@5.4.0:
@@ -2159,8 +2176,8 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  tailwindcss@3.4.3:
-    resolution: {integrity: sha512-U7sxQk/n397Bmx4JHbJx/iSOOv5G+II3f1kpLpY2QeUv5DcPdcTsYLlusZfq1NthHS1c1cZoyFmmkex1rzke0A==}
+  tailwindcss@3.4.4:
+    resolution: {integrity: sha512-ZoyXOdJjISB7/BcLTR6SEsLgKtDStYyYZVLsUtWChO4Ps20CBad7lfJKVDiejocV4ME1hLmyY0WJE3hSDcmQ2A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2305,8 +2322,8 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yaml@2.4.3:
-    resolution: {integrity: sha512-sntgmxj8o7DE7g/Qi60cqpLBA3HG3STcDA0kO+WfB05jEKhZMbY7umNm2rBpQvsmZ16/lPXCJGW2672dgOUkrg==}
+  yaml@2.4.4:
+    resolution: {integrity: sha512-wle6DEiBMLgJAdEPZ+E8BPFauoWbwPujfuGJJFErxYiU4txXItppe8YqeFPAaWnW5CxduQ995X6b5e1NqrmxtA==}
     engines: {node: '>= 14'}
     hasBin: true
 
@@ -3060,7 +3077,7 @@ snapshots:
 
   '@babel/regjsgen@0.8.0': {}
 
-  '@babel/runtime@7.24.6':
+  '@babel/runtime@7.24.7':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -3222,7 +3239,7 @@ snapshots:
 
   '@radix-ui/react-compose-refs@1.0.1(@types/react@18.3.3)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.3
@@ -3233,7 +3250,7 @@ snapshots:
 
   '@radix-ui/react-slot@1.0.2(@types/react@18.3.3)(react@18.3.1)':
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.3)(react@18.3.1)
       react: 18.3.1
     optionalDependencies:
@@ -3250,7 +3267,7 @@ snapshots:
 
   '@types/json5@0.0.29': {}
 
-  '@types/node@20.14.1':
+  '@types/node@20.14.2':
     dependencies:
       undici-types: 5.26.5
 
@@ -3478,7 +3495,7 @@ snapshots:
 
   browserslist@4.23.0:
     dependencies:
-      caniuse-lite: 1.0.30001627
+      caniuse-lite: 1.0.30001629
       electron-to-chromium: 1.4.796
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.0)
@@ -3499,7 +3516,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001627: {}
+  caniuse-lite@1.0.30001629: {}
 
   chalk@2.4.2:
     dependencies:
@@ -3824,7 +3841,7 @@ snapshots:
 
   eslint-plugin-jsx-a11y@6.8.0(eslint@8.57.0):
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       aria-query: 5.3.0
       array-includes: 3.1.8
       array.prototype.flatmap: 1.3.2
@@ -3984,6 +4001,13 @@ snapshots:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
+  framer-motion@11.2.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      tslib: 2.6.3
+    optionalDependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
@@ -4039,7 +4063,7 @@ snapshots:
   glob@10.4.1:
     dependencies:
       foreground-child: 3.1.1
-      jackspeak: 3.2.5
+      jackspeak: 3.4.0
       minimatch: 9.0.4
       minipass: 7.1.2
       path-scurry: 1.11.1
@@ -4241,13 +4265,13 @@ snapshots:
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
 
-  jackspeak@3.2.5:
+  jackspeak@3.4.0:
     dependencies:
       '@isaacs/cliui': 8.0.2
     optionalDependencies:
       '@pkgjs/parseargs': 0.11.0
 
-  jiti@1.21.0: {}
+  jiti@1.21.3: {}
 
   jose@5.4.0: {}
 
@@ -4367,7 +4391,7 @@ snapshots:
       '@next/env': 14.2.3
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001627
+      caniuse-lite: 1.0.30001629
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -4502,7 +4526,7 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.38):
     dependencies:
       lilconfig: 3.1.1
-      yaml: 2.4.3
+      yaml: 2.4.4
     optionalDependencies:
       postcss: 8.4.38
 
@@ -4582,7 +4606,7 @@ snapshots:
 
   regenerator-transform@0.15.2:
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
 
   regexp.prototype.flags@1.5.2:
     dependencies:
@@ -4775,13 +4799,13 @@ snapshots:
 
   tailwind-merge@2.3.0:
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
 
-  tailwindcss-animate@1.0.7(tailwindcss@3.4.3):
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.4):
     dependencies:
-      tailwindcss: 3.4.3
+      tailwindcss: 3.4.4
 
-  tailwindcss@3.4.3:
+  tailwindcss@3.4.4:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -4791,7 +4815,7 @@ snapshots:
       fast-glob: 3.3.2
       glob-parent: 6.0.2
       is-glob: 4.0.3
-      jiti: 1.21.0
+      jiti: 1.21.3
       lilconfig: 2.1.0
       micromatch: 4.0.7
       normalize-path: 3.0.0
@@ -4975,6 +4999,6 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yaml@2.4.3: {}
+  yaml@2.4.4: {}
 
   yocto-queue@0.1.0: {}
