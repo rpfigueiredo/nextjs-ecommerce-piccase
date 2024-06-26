@@ -16,6 +16,9 @@ import { ArrowRight, Check, ChevronsUpDown } from 'lucide-react'
 import { BASE_PRICE } from '@/config/products'
 import { useUploadThing } from '@/lib/uploadthing'
 import { useToast } from '@/components/ui/use-toast'
+import { saveConfig as _saveConfig, SaveConfigArgs } from './actions'
+import { useMutation } from '@tanstack/react-query'
+import { useRouter } from 'next/navigation'
 
 interface DesignConfiguratorProps {
   configId: string
@@ -26,6 +29,25 @@ interface DesignConfiguratorProps {
 const DesignConfigurator = ({ configId, imageUrl, imageDimensions }: DesignConfiguratorProps) => {
 
   const { toast } = useToast()
+  const router = useRouter()
+
+  const { mutate: saveConfig, isPending } = useMutation({
+    mutationKey: ['save-config'],
+    mutationFn: async (args: SaveConfigArgs) => {
+      await Promise.all([saveConfiguration(), _saveConfig(args)])
+    },
+    onError: () => {
+      toast({
+        title: 'Algo deu errado',
+        description: 'Houve um erro do nosso lado. Por favor, tente novamente.',
+        variant: 'destructive',
+      })
+    },
+    onSuccess: () => {
+      router.push(`/configure/preview?id=${configId}`)
+    },
+  })
+
 
   const [options, setOptions] = useState<{
     color: (typeof COLORS)[number]
@@ -346,8 +368,14 @@ const DesignConfigurator = ({ configId, imageUrl, imageDimensions }: DesignConfi
                 )}
               </p>
               <Button
-                onClick={() =>
-                  saveConfiguration()
+                 onClick={() =>
+                  saveConfig({
+                    configId,
+                    color: options.color.value,
+                    finish: options.acabamento.value,
+                    material: options.material.value,
+                    model: options.model.value,
+                  })
                 }
                 size='sm'
                 className='w-full'>
