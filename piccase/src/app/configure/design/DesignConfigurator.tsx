@@ -379,7 +379,7 @@ const DesignConfigurator = ({ configId, imageUrl, imageDimensions }: DesignConfi
                 }
                 size='sm'
                 className='w-full'>
-                Comprar
+                Continue
                 <ArrowRight className='h-4 w-4 ml-1.5 inline' />
               </Button>
             </div>
