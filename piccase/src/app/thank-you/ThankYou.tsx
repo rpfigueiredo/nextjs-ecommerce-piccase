@@ -66,7 +66,7 @@ const ThankYou  = () => {
         <div className='mt-10 border-t border-zinc-200'>
           <div className='mt-10 flex flex-auto flex-col'>
             <h4 className='font-semibold text-zinc-900'>
-            Você fez uma grande escolha!
+            Excelente escolha!
             </h4>
             <p className='mt-2 text-sm text-zinc-600'>
             Nós, da PicCase, acreditamos que uma capa de celular não precisa apenas ser bonita, mas também durar muitos anos. Oferecemos uma garantia de impressão de 5 anos: se a sua capa não for da mais alta qualidade, nós a substituiremos gratuitamente.
