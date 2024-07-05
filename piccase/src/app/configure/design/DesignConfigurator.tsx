@@ -368,7 +368,10 @@ const DesignConfigurator = ({ configId, imageUrl, imageDimensions }: DesignConfi
                 )}
               </p>
               <Button
-                 onClick={() =>
+                isLoading={isPending}
+                disabled={isPending}
+                loadingText='Salvando'
+                onClick={() =>
                   saveConfig({
                     configId,
                     color: options.color.value,

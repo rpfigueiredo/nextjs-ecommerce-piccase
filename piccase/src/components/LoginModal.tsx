@@ -1,4 +1,3 @@
-
 import type { Dispatch, SetStateAction } from 'react'
 import {
     Dialog,
@@ -20,12 +19,12 @@ const LoginModal = ({
 }) => {
     return (
         <Dialog onOpenChange={setIsOpen} open={isOpen}>
-            <DialogContent className='absolute z-[9999999]'>
+            <DialogContent className='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 sm:w-full sm:max-w-md sm:mx-auto p-4 z-[9999999]'>
                 <DialogHeader>
                     <div className='relative mx-auto w-24 h-24 mb-2'>
                         <Image
-                            src='/snake-1.png'
-                            alt='snake image'
+                            src='/cadeado.png'
+                            alt='cadeado'
                             className='object-contain'
                             fill
                         />
