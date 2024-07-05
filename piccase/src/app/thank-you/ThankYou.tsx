@@ -118,7 +118,7 @@ const ThankYou  = () => {
             <div>
               <p className='font-medium text-zinc-900'>Método de envio</p>
               <p className='mt-2 text-zinc-700'>
-              DHL, leva até 3 dias úteis
+              Sedex, leva até 3 dias úteis
               </p>
             </div>
           </div>
