@@ -4,16 +4,18 @@ import { db } from '@/db'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
 
 export const getAuthStatus = async () => {
-  const { getUser } = getKindeServerSession()
-  const user = await getUser()
+  const { getUser } = getKindeServerSession();
+  const user = await getUser();
+  
+  console.log('User:', user); // Verifique o usuário retornado
 
   if (!user?.id || !user.email) {
-    throw new Error('Dados de usuário inválidos')
+    throw new Error('Dados de usuário inválidos');
   }
 
   const existingUser = await db.user.findFirst({
     where: { id: user.id },
-  })
+  });
 
   if (!existingUser) {
     await db.user.create({
@@ -21,8 +23,8 @@ export const getAuthStatus = async () => {
         id: user.id,
         email: user.email,
       },
-    })
+    });
   }
 
-  return { success: true }
+  return { success: true };
 }
