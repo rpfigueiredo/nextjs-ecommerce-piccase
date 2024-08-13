@@ -52,7 +52,7 @@ const Navbar = async () => {
             ) : (
               <>
                 <RegisterLink
-                  postLoginRedirectURL="/welcome"
+                  postLoginRedirectURL="/"
                   className={buttonVariants({
                     size: 'sm',
                     variant: 'ghost',
@@ -61,7 +61,7 @@ const Navbar = async () => {
                 </RegisterLink>
 
                 <LoginLink
-                  postLoginRedirectURL="/dashboard"
+                  postLoginRedirectURL="/"
                   className={buttonVariants({
                     size: 'sm',
                     variant: 'ghost',
