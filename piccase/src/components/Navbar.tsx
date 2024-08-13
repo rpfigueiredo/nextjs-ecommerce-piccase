@@ -3,7 +3,7 @@ import MaxWidthWrapper from './MaxWidthWrapper'
 import { buttonVariants } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server'
-import { LoginLink, RegisterLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import { RegisterLink, LoginLink, LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components'
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession()
@@ -52,7 +52,6 @@ const Navbar = async () => {
             ) : (
               <>
                 <RegisterLink
-                  postLoginRedirectURL="/"
                   className={buttonVariants({
                     size: 'sm',
                     variant: 'ghost',
@@ -61,7 +60,6 @@ const Navbar = async () => {
                 </RegisterLink>
 
                 <LoginLink
-                  postLoginRedirectURL="/"
                   className={buttonVariants({
                     size: 'sm',
                     variant: 'ghost',
